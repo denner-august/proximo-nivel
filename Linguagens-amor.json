@@ -1,9 +1,44 @@
 {
   "linguagens-amor": [
-    { "titulo": "primeira linguagem: palavras de afirmação", "conteudo": "" },
-    { "titulo": "segunda linguagem: qualidade de tempo", "conteudo": "" },
-    { "titulo": "terceira linguagem: receber presentes", "conteudo": "" },
-    { "titulo": "quarta linguagem: formas de servir", "conteudo": "" },
-    { "titulo": "quinta linguagem: toque físico", "conteudo": "" }
+    {
+      "titulo": "Primeira linguagem: palavras de afirmação",
+      "subtitulo": "linguagem de amor onde os elogios são fundamentais!",
+      "conteudo": "Pessoas, cuja linguagem de amor são as palavras de afirmação, sentem-se amadas e valorizadas quando escutam palavras elogiosas acerca do seu carácter e das suas ações, No entanto, a sua auto estima e sentido de amor próprio será abalado, se receberem críticas ou palavras insultuosas com frequência. Literalmente uma palavra pode fazê-las alcançar coisas/subir montanhas ou deprimi-la a ponto de as fazer duvidar delas próprias. As pessoas com esta linguagem de amor precisam de escutar palavras de apreciação sinceras e verdadeiras. Desta forma, sentem-se amadas e verdadeiramente valorizadas. E como as palavras têm muito peso, um simples te amo faz milagres. Melhor ainda, se incluir as razões por trás do amor, por exemplo, te amo porque és tão motivada para ajudar os outros!, Na realidade elogios são uma forma de demonstrar admiração por aquilo que cada pessoa é ou faz. Convém referir que os elogios devem ser genuínos e específicos. E sempre que possível referentes também às tentativas e não apenas aos resultados.",
+      "exemplo-01": "Nossa como você está linda(a)",
+      "exemplo-02": "A comida que você fez está simplesmente maravilhosa",
+      "exemplo-03": "Obrigado por me ajuda ficou ótimo"
+    },
+    {
+      "titulo": "Segunda linguagem: qualidade de tempo",
+      "subtitulo": "linguagens de amor em que o tempo exclusivo é o principal protagonista.",
+      "conteudo": "Embora pareça relativamente simples, este tipo de linguagem de amor não se resume apenas a tempo, mas a atenção. Passar tempo juntos, dando atenção específica à pessoa, fazer atividades significativas em conjunto, A pessoa sente-se verdadeiramente amada quando é o centro das atenções no tempo em que estão juntos. Por outro lado, o cancelamento frequente de atividades em conjunto ou o jantar fora, mas prestar mais atenção ao telemóvel, faz com que o tanque esvazie e a pessoa não se sinta amada. Para expressar amor a pessoas com este tipo de linguagem, deve ter em atenção estes pontos",
+      "exemplo-01": "Planeje o tempo para ficarem juntos: ser deliberado na preparação do tempo em conjunto, faz a pessoa sentir-se especial e claro amada!",
+      "exemplo-02": " Esteja presente: é fácil estar presente fisicamente, mas, às vezes, a mente viaja. Por isso, foque a sua atenção na pessoa e livre-se das distrações!",
+      "exemplo-03": "Seja afetuoso: um sorriso ao olhar para a pessoa, um abraço carinhoso…demonstram atenção e amor, naturalmente!"
+    },
+    {
+      "titulo": "Terceira linguagem: receber presentes",
+      "subtitulo": "",
+      "conteudo": "",
+      "exemplo-01": "",
+      "exemplo-02": "",
+      "exemplo-03": ""
+    },
+    {
+      "titulo": "Quarta linguagem: formas de servir",
+      "subtitulo": "",
+      "conteudo": "",
+      "exemplo-01": "",
+      "exemplo-02": "",
+      "exemplo-03": ""
+    },
+    {
+      "titulo": "Quinta linguagem: toque físico",
+      "subtitulo": "",
+      "conteudo": "",
+      "exemplo-01": "",
+      "exemplo-02": "",
+      "exemplo-03": ""
+    }
   ]
 }
