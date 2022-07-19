@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 import { StyleSheet, View, ScrollView, Text } from "react-native";
 
-import { Dimensions } from "react-native";
-const windowHeight = Dimensions.get("window").height;
+import { windowHeight } from "./ferramentas/dispositivo";
 
 interface childrenProps {
   children: ReactNode;

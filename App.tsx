@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { Inicial } from "./components/telaPrincipal/telaInicial";
+import { StyleSheet, View } from "react-native";
 import { Fluxo } from "./screens/fluxo";
 
 export default function App() {

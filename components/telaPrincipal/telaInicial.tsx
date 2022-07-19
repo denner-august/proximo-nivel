@@ -4,7 +4,7 @@ import { ButtonNext } from "../ferramentas/buttonNext";
 import { Titulo } from "../ferramentas/titulo";
 
 import { Dimensions } from "react-native";
-const windowHeight = Dimensions.get("window").height;
+import { windowHeight } from "../ferramentas/dispositivo";
 
 export function Inicial({ navigation }: any) {
   return (
