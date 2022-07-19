@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Fluxo />
-      <StatusBar style="light" />
+      <StatusBar style="light" translucent={true} backgroundColor="#28243B" />
     </View>
   );
 }

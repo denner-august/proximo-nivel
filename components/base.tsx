@@ -14,7 +14,7 @@ export function BaseTela({ children }: childrenProps) {
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    paddingTop: 30 % windowHeight,
+    marginTop: 30 % windowHeight,
     backgroundColor: "#28243B",
   },
 });

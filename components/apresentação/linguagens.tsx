@@ -7,21 +7,19 @@ import { ButtonNext } from "../ferramentas/buttonNext";
 import { windowHeight } from "../ferramentas/dispositivo";
 import { useState } from "react";
 
-export function Linguagens() {
-  const [abrirModal, setAbrirModal] = useState("");
-
+export function Linguagens({ navigation }: any) {
   function renderizaLinguanges() {
     return Linguanges_amor["linguagens-amor"].map((item) => {
       return (
         <TouchableOpacity
           key={item.titulo}
-          onPress={() => setAbrirModal(item.titulo)}
+          onPress={() =>
+            navigation.navigate("Descricacao_linguagens", {
+              linguagem: item,
+            })
+          }
         >
           <Text style={styles.texto}>{item.titulo}</Text>
-          {
-            abrirModal === item.titulo ??
-              null /*'abrira o modal pra pagina mostrando uma descrição da linguagem' */
-          }
         </TouchableOpacity>
       );
     });
