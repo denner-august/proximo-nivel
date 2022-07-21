@@ -5,7 +5,6 @@ import { Titulo } from "../ferramentas/titulo";
 import Linguanges_amor from "../../Linguagens-amor.json";
 import { ButtonNext } from "../ferramentas/buttonNext";
 import { windowHeight } from "../ferramentas/dispositivo";
-import { useState } from "react";
 
 export function Linguagens({ navigation }: any) {
   function renderizaLinguanges() {

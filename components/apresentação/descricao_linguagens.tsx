@@ -3,28 +3,33 @@ import { BaseTela } from "../base";
 import { ButtonNext } from "../ferramentas/buttonNext";
 import { windowHeight } from "../ferramentas/dispositivo";
 import { Titulo } from "../ferramentas/titulo";
-
-interface descricaoProps {
-  navigation: { goBack: () => void };
-  route: { params: { linguagem: { titulo: string; conteudo: string } } };
-}
+// interface/types
+import { descricaoProps } from "../../types/linguagens";
 
 export function Descricacao_linguagens({ navigation, route }: descricaoProps) {
-  const { titulo, conteudo } = route.params.linguagem;
+  const { titulo, subtitulo, conteudo, exemplos } = route.params.linguagem;
+
+  function RenderizaExemplos() {
+    return exemplos.map((item, key) => {
+      return (
+        <Text key={key} style={[style.textos, style.exemplo]}>
+          {item}
+        </Text>
+      );
+    });
+  }
 
   return (
     <BaseTela>
       <ScrollView style={{ flex: 1 }}>
         <View style={style.Container}>
           <Titulo titulo="descrição" />
-          <Text style={style.textos}>{titulo}</Text>
-          <Text style={style.textos}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Repellendus recusandae illum beatae mollitia, non quia ratione
-            maxime amet obcaecati dolore vero iure eaque ea repellat soluta
-            minima quae ad adipisci. Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Beatae quibusdam exercitationem voluptatem a ipsam
-          </Text>
+          <View style={style.conteudoTexto}>
+            <Text style={[style.textos, style.titulo]}>{titulo}</Text>
+            <Text style={[style.textos, style.subtitulo]}>{subtitulo}</Text>
+            <View>{RenderizaExemplos()}</View>
+            <Text style={style.textos}>{conteudo}</Text>
+          </View>
 
           <ButtonNext
             buttonTitle="Voltar"
@@ -43,10 +48,25 @@ const style = StyleSheet.create({
     justifyContent: "space-evenly",
     alignItems: "center",
   },
+  conteudoTexto: {
+    width: "95%",
+    justifyContent: "space-evenly",
+  },
   textos: {
     color: "#fff",
-    fontSize: 18,
+    fontSize: 15,
     textAlign: "left",
-    width: "90%",
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  titulo: {
+    color: "#f6ae2d",
+    fontSize: 16.5,
+  },
+  subtitulo: {
+    color: "#00abe7",
+  },
+  exemplo: {
+    color: "#fc9f5b",
   },
 });
