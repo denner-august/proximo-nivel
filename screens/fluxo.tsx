@@ -5,6 +5,7 @@ import { Inicial } from "../components/telaPrincipal/telaInicial";
 import { Apresetacao01 } from "../components/apresentação/apresenta01";
 import { Linguagens } from "../components/apresentação/linguagens";
 import { Descricacao_linguagens } from "../components/apresentação/descricao_linguagens";
+import { Regras } from "../components/apresentação/Regras";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,11 @@ export function Fluxo() {
           options={{ headerShown: false }}
           name="Descricacao_linguagens"
           component={Descricacao_linguagens}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="Regras"
+          component={Regras}
         />
       </Stack.Navigator>
     </NavigationContainer>
