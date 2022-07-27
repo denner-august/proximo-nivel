@@ -1,11 +1,11 @@
 {
-  "regras": {
-    "regra-01": "Preste atenção ao seu parceiro dutante o dia para entender qual a linguagem de amor dele",
-    "regra-02": "Ao final do dia vocês terão que marca no aplicativo como se sentiram em relação  ao parceiro vocês terão 3 opções: não amado, amado e muito amado",
-    "regra-03": "depois de marca no app conversem sobre as respostas dadas, e o motivo, o que aconteceu NAQUELE DIA para se sentirem daquela forma e digam como isso pode melhorar",
-    "regra-04": "enquanto um estiver falando o outro parceiro deve apenas escutas e só deve falar quando o outro terminar",
-    "regra-05": "durante a fala sentem um de frente para o outro sem distrações",
-    "regra-06": "apos terminarem de conversa vocês  devem se abraçar e no dia seguinte tentem executar melhorias de acordo com o que foi conversado",
-    "regra-07": "repitam isso durante um minimo de um mês podendo se prologa caso os dois estejam de acordo"
-  }
+  "regras": [
+    "Preste atenção ao seu parceiro dutante o dia para entender qual a linguagem de amor dele",
+    "Ao final do dia vocês terão que marca no aplicativo como se sentiram em relação  ao parceiro vocês terão 3 opções: não amado, amado e muito amado",
+    "depois de marca no app conversem sobre as respostas dadas, e o motivo, o que aconteceu NAQUELE DIA para se sentirem daquela forma e digam como isso pode melhorar",
+    "enquanto um estiver falando o outro parceiro deve apenas escutas e só deve falar quando o outro terminar",
+    "durante a fala sentem um de frente para o outro sem distrações",
+    "apos terminarem de conversa vocês  devem se abraçar e no dia seguinte tentem executar melhorias de acordo com o que foi conversado",
+    "repitam isso durante um minimo de um mês podendo se prologa caso os dois estejam de acordo"
+  ]
 }
