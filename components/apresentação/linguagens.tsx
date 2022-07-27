@@ -29,7 +29,6 @@ export function Linguagens({ navigation }: any) {
       <View style={styles.Container}>
         <Titulo titulo="As Linguagens do Amor" />
         <View style={styles.Container_Linguagens}>{renderizaLinguanges()}</View>
-        {/* <ButtonNext buttonTitle="Proximas intruções" /> */}
         <ButtonNext
           buttonTitle="Proximas intruções"
           NextScreen={() => navigation.navigate("Regras")}
