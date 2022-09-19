@@ -22,8 +22,8 @@ export function Apresetacao01({ navigation }: any) {
         >
           <Text style={styles.texto}>
             Este aplicativo foi Desenvolvido com a principal ideia de ajudar
-            casais a se amarem e se entenderem melhor, serve para casais
-            recentes ou de longa data.
+            casais a se entenderem melhor, serve para casais recentes ou de
+            longa data.
           </Text>
           <Text style={styles.texto}>
             Começaremos falando sobre as 5 linguagens do amor, caso você ainda

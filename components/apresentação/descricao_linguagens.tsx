@@ -3,7 +3,6 @@ import { BaseTela } from "../base";
 import { ButtonNext } from "../ferramentas/buttonNext";
 import { windowHeight } from "../ferramentas/dispositivo";
 import { Titulo } from "../ferramentas/titulo";
-// interface/types
 import { descricaoProps } from "../../types/linguagens";
 
 export function Descricacao_linguagens({ navigation, route }: descricaoProps) {

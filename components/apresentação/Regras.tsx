@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 
 import { Titulo } from "../ferramentas/titulo";
 import { BaseTela } from "../base";
@@ -7,31 +7,44 @@ import { windowHeight } from "../ferramentas/dispositivo";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 import RegrasAPP from "../../regras.json";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { linguangesProps } from "../../types/linguagens";
 
-export function Regras() {
-  const heartIcon = <FontAwesome5 name="heart" size={15} color="black" />;
+type regras = {
+  item: string;
+};
 
-  function RenderRegras() {
-    return RegrasAPP.regras.map((item) => {
-      return (
-        <View key={item} style={style.ContainerRegras}>
-          <Text style={style.regras}>
-            {heartIcon}
-            {item}
-          </Text>
-        </View>
-      );
-    });
+export function Regras({ navigation }: any) {
+  const heartIcon = <FontAwesome5 name="heart" size={15} color="#99144c" />;
+
+  function RenderRegras({ item }: regras) {
+    return (
+      <View style={style.ContainerRegras}>
+        <Text style={style.regras}>
+          {heartIcon}
+          {item}
+        </Text>
+      </View>
+    );
   }
 
   return (
-    <BaseTela>
+    <SafeAreaView>
       <View style={style.Container}>
         <Titulo titulo="Regras" />
-        <View>{RenderRegras()}</View>
-        <ButtonNext buttonTitle="Avançar" />
+
+        <FlatList
+          data={RegrasAPP.regras}
+          renderItem={RenderRegras}
+          keyExtractor={() => JSON.stringify(Math.random())}
+        />
+
+        <ButtonNext
+          buttonTitle="Avançar"
+          NextScreen={() => navigation.navigate("Menu")}
+        />
       </View>
-    </BaseTela>
+    </SafeAreaView>
   );
 }
 
@@ -41,6 +54,8 @@ const style = StyleSheet.create({
     justifyContent: "space-evenly",
     alignItems: "center",
     paddingHorizontal: 10,
+    backgroundColor: "#28243B",
+    paddingVertical: 20,
   },
 
   ContainerRegras: {
