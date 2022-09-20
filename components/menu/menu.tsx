@@ -1,17 +1,11 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  FlatList,
-} from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 
 import { Titulo } from "../ferramentas/titulo";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Entypo } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 
-export function Menu() {
+export function Menu({ navigation }: any) {
   const ButtonMenu = <Entypo name="menu" size={30} color="#ffff" />;
 
   const [Dias, setDias] = useState<number[]>([]);
@@ -33,9 +27,16 @@ export function Menu() {
   function RenderNumber() {
     return Dias.map((item, key) => {
       return (
-        <Text style={{ color: "#ffff" }} key={key}>
-          {item}
-        </Text>
+        <TouchableOpacity
+          key={key}
+          onPress={() =>
+            navigation.navigate("Avaliação", {
+              dia: item,
+            })
+          }
+        >
+          <Text style={styles.diaSemana}>{item}</Text>
+        </TouchableOpacity>
       );
     });
   }
@@ -51,7 +52,7 @@ export function Menu() {
 
       <View style={styles.menu}>
         <Text style={{ color: "#ffff", fontSize: 20, textAlign: "center" }}>
-          Dias avaliados
+          Dias da semana e avaliados
         </Text>
 
         <View style={styles.subMenu}>{RenderNumber()}</View>
@@ -69,20 +70,29 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
 
-    backgroundColor: "red",
     paddingLeft: 10,
   },
-
   menu: {
     flex: 2,
     marginTop: 30,
-    // backgroundColor: "blue",
   },
   subMenu: {
     flexDirection: "row",
     flexWrap: "wrap",
-    marginTop: 10,
     height: "80%",
-    backgroundColor: "red",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+
+  diaSemana: {
+    color: "#ffff",
+    backgroundColor: "#208386",
+    textAlign: "center",
+    fontSize: 15,
+    borderRadius: 5,
+    padding: 10,
+    margin: 5,
+    width: 50,
+    height: 45,
   },
 });
