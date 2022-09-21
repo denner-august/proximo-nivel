@@ -8,6 +8,7 @@ import { Descricacao_linguagens } from "../components/apresentação/descricao_l
 import { Regras } from "../components/apresentação/Regras";
 import { Menu } from "../components/menu/menu";
 import { Avaliacao } from "../components/avaliação/Avaliacao";
+import { Options } from "../components/options/options";
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,7 @@ export function Fluxo() {
           name="Avaliação"
           component={Avaliacao}
         />
+        <Stack.Screen options={{}} name="Options" component={Options} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -3,13 +3,12 @@ import { BaseTela } from "../base";
 import { ButtonNext } from "../ferramentas/buttonNext";
 import { windowHeight } from "../ferramentas/dispositivo";
 import { Titulo } from "../ferramentas/titulo";
-import { descricaoProps } from "../../types/linguagens";
 
-export function Descricacao_linguagens({ navigation, route }: descricaoProps) {
+export function Descricacao_linguagens({ navigation, route }: any) {
   const { titulo, subtitulo, conteudo, exemplos } = route.params.linguagem;
 
   function RenderizaExemplos() {
-    return exemplos.map((item, key) => {
+    return exemplos.map((item: any, key: any) => {
       return (
         <Text key={key} style={[style.textos, style.exemplo]}>
           {item}

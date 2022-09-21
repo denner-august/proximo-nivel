@@ -44,7 +44,7 @@ export function Menu({ navigation }: any) {
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => console.log("teste")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Options")}>
           {ButtonMenu}
         </TouchableOpacity>
         <Titulo titulo="Avaliação" />

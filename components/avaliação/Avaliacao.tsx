@@ -1,9 +1,16 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { useState, useEffect } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Dimensions,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 import { AntDesign } from "@expo/vector-icons";
-import { Dimensions } from "react-native";
 import { RadioButton } from "react-native-paper";
-import { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const windowWidth = Dimensions.get("window").width;
 
@@ -11,10 +18,32 @@ export function Avaliacao({ navigation, route }: any) {
   const { dia } = route.params;
   const buttonVoltar = <AntDesign name="back" size={30} color="#fff" />;
 
-  const [NotaDay, setNotaDay] = useState("");
+  const [NotaDay, setNotaDay] = useState("teste");
 
-  function SalvarNota() {
-    console.log("salvando");
+  useEffect(() => {
+    async function getResulDay() {
+      try {
+        const value = await AsyncStorage.getItem(`Notaday${dia}`);
+        if (value !== null) {
+          setNotaDay(value);
+        }
+        console.log(value);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    getResulDay();
+  }, []);
+
+  async function SalvarNota() {
+    if (NotaDay.length > 0) {
+      try {
+        await AsyncStorage.setItem(`Notaday${dia}`, NotaDay);
+        console.log("salvoo"); // melhorar o alert para o usuario
+      } catch (e) {
+        console.error(e);
+      }
+    }
   }
 
   return (
