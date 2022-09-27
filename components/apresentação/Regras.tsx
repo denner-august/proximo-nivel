@@ -1,14 +1,12 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
 
 import { Titulo } from "../ferramentas/titulo";
-import { BaseTela } from "../base";
 import { ButtonNext } from "../ferramentas/buttonNext";
 import { windowHeight } from "../ferramentas/dispositivo";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 import RegrasAPP from "../../regras.json";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { linguangesProps } from "../../types/linguagens";
 
 type regras = {
   item: string;

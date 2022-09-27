@@ -52,10 +52,29 @@ export function Menu({ navigation }: any) {
 
       <View style={styles.menu}>
         <Text style={{ color: "#ffff", fontSize: 20, textAlign: "center" }}>
-          Dias da semana e avaliados
+          Dias da semana Avaliados
         </Text>
 
         <View style={styles.subMenu}>{RenderNumber()}</View>
+
+        <View style={styles.aviso}>
+          <Text style={{ fontSize: 15, textAlign: "left", color: "#ffff" }}>
+            Revise os dias marcados para ver a diferença de cada um, a ideia é
+            que ao logo do mẽs as respostas sejam melhores, mas isso só vai
+            acontecer se os dois estiverem realmente dispostos
+          </Text>
+          <Text
+            style={{
+              fontSize: 15,
+              textAlign: "left",
+              color: "#ffff",
+              marginTop: 15,
+            }}
+          >
+            caso tenha alguma duvida sobre alguma linguagem volte e leia
+            novamente
+          </Text>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -79,7 +98,7 @@ const styles = StyleSheet.create({
   subMenu: {
     flexDirection: "row",
     flexWrap: "wrap",
-    height: "80%",
+    height: "50%",
     justifyContent: "center",
     alignContent: "center",
   },
@@ -94,5 +113,10 @@ const styles = StyleSheet.create({
     margin: 5,
     width: 50,
     height: 45,
+  },
+  aviso: {
+    flex: 1,
+    // backgroundColor: "red",
+    padding: 10,
   },
 });

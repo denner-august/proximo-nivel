@@ -5,6 +5,7 @@ import {
   View,
   TouchableOpacity,
   Dimensions,
+  ToastAndroid,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -27,9 +28,8 @@ export function Avaliacao({ navigation, route }: any) {
         if (value !== null) {
           setNotaDay(value);
         }
-        console.log(value);
       } catch (e) {
-        console.error(e);
+        ToastAndroid.show("Erro ao salvar os dados", ToastAndroid.SHORT);
       }
     }
     getResulDay();
@@ -39,7 +39,7 @@ export function Avaliacao({ navigation, route }: any) {
     if (NotaDay.length > 0) {
       try {
         await AsyncStorage.setItem(`Notaday${dia}`, NotaDay);
-        console.log("salvoo"); // melhorar o alert para o usuario
+        ToastAndroid.show(`Dia ${dia} salvo`, ToastAndroid.SHORT);
       } catch (e) {
         console.error(e);
       }
