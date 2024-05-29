@@ -19,7 +19,7 @@ export function Avaliacao({ navigation, route }: any) {
   const { dia } = route.params;
   const buttonVoltar = <AntDesign name="back" size={30} color="#fff" />;
 
-  const [NotaDay, setNotaDay] = useState("teste");
+  const [NotaDay, setNotaDay] = useState("");
 
   useEffect(() => {
     async function getResulDay() {
@@ -41,7 +41,7 @@ export function Avaliacao({ navigation, route }: any) {
         await AsyncStorage.setItem(`Notaday${dia}`, NotaDay);
         ToastAndroid.show(`Dia ${dia} salvo`, ToastAndroid.SHORT);
       } catch (e) {
-        console.error(e);
+        ToastAndroid.show("Erro ao salvar os dados", ToastAndroid.SHORT);
       }
     }
   }
