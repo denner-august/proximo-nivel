@@ -12,7 +12,6 @@ export function Menu({ navigation }: any) {
 
   useEffect(() => {
     function gerar() {
-      let i = 0;
       for (let index = 1; index <= 30; index++) {
         setDias((Dias) => [...Dias, index]);
       }
@@ -116,7 +115,6 @@ const styles = StyleSheet.create({
   },
   aviso: {
     flex: 1,
-    // backgroundColor: "red",
     padding: 10,
   },
 });
